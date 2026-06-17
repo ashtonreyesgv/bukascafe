@@ -157,3 +157,45 @@ footer{background:#22382e;color:rgba(243,233,216,.82);padding:3.5rem 0 2.5rem}
   .news{padding:2.2rem 1.4rem}
   section{padding:3.5rem 0}
 }
+
+
+/* ===================== BUKAS BRANDING ===================== */
+/* brand lockup mark = badge / icon */
+.brand{gap:.7rem}
+.brand .mark{width:auto;height:38px;flex:0 0 auto;background:none;border-radius:0;overflow:visible}
+.brand .mark img{height:38px;width:auto;display:block}
+
+/* hero badge seal */
+.hero-art{position:relative}
+.hero-seal{position:absolute;top:16px;left:16px;width:112px;height:112px;border-radius:50%;
+  background:var(--cream);display:grid;place-items:center;box-shadow:var(--shadow);
+  transform:rotate(-6deg);z-index:3;border:2px solid rgba(46,74,61,.14)}
+.hero-seal img{width:66px;height:auto;display:block}
+
+/* brand ticker — wordmark band */
+.ticker{background:var(--jade);overflow:hidden;padding:.8rem 0;
+  border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.ticker-track{display:flex;width:max-content;animation:bukas-ticker 32s linear infinite}
+.ticker-seg{display:flex;align-items:center;flex:0 0 auto}
+.ticker-seg span{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;letter-spacing:.03em;
+  color:var(--cream-2);padding:0 1.15rem;white-space:nowrap}
+.ticker-seg i{font-style:normal;color:var(--honey);font-size:.62rem;opacity:.85}
+.ticker-seg i::before{content:"\25C6"}
+@keyframes bukas-ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* stacked logo divider between story & menu */
+.brand-divider{display:flex;align-items:center;justify-content:center;gap:1.8rem;margin:1.8rem 0 .5rem}
+.brand-divider::before,.brand-divider::after{content:"";height:1px;width:min(180px,20vw);background:rgba(46,74,61,.22)}
+.brand-divider img{height:150px;width:auto;display:block}
+
+/* footer wordmark */
+.foot-logo{display:flex;justify-content:center;margin-bottom:2.4rem}
+.foot-logo img{height:84px;width:auto;display:block;opacity:.95}
+
+@media(max-width:880px){
+  .brand .mark,.brand .mark img{height:32px}
+  .hero-seal{width:92px;height:92px;top:12px;left:12px}
+  .hero-seal img{width:50px}
+  .brand-divider img{height:112px}
+  .foot-logo img{height:62px}
+}
