@@ -199,3 +199,53 @@ footer{background:#22382e;color:rgba(243,233,216,.82);padding:3.5rem 0 2.5rem}
   .brand-divider img{height:112px}
   .foot-logo img{height:62px}
 }
+
+/* index menu CTA */
+.menu-cta{display:flex;justify-content:center;margin-top:2.6rem}
+
+/* ===================== MENU PAGE ===================== */
+.menu-hero{background:var(--jade);color:var(--cream);padding:4.5rem 0 4rem;text-align:center;position:relative;overflow:hidden}
+.menu-hero .eyebrow{color:var(--honey)}
+.menu-hero h1{font-family:'Fraunces',serif;font-size:clamp(2.6rem,6vw,4.2rem);color:#fff;font-weight:700;margin:.6rem 0 1rem}
+.menu-hero h1 em{font-style:italic;color:var(--honey)}
+.menu-hero p{color:rgba(243,233,216,.85);max-width:46ch;margin:0 auto;font-size:1.12rem}
+.menu-hero .menu-seal{width:108px;height:auto;margin:0 auto 1.4rem;display:block;filter:drop-shadow(0 12px 30px rgba(0,0,0,.3))}
+.menu-back{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.8rem;color:var(--cream);text-decoration:none;font-weight:600;font-size:.92rem;opacity:.85}
+.menu-back:hover{opacity:1;color:var(--honey)}
+
+.menu-page{padding:4.5rem 0}
+.menu-page .wrap{width:min(1040px,92vw)}
+.menu-section{margin-bottom:4rem}
+.menu-section:last-child{margin-bottom:0}
+.menu-section-head{text-align:center;margin-bottom:2.2rem}
+.menu-section-head .kicker{font-family:'Fraunces',serif;font-size:clamp(1.8rem,4vw,2.6rem);color:var(--jade);font-weight:700}
+.menu-section-head .sub{color:var(--muted);font-size:1rem;margin-top:.35rem}
+.menu-section-head .price-note{display:inline-block;margin-top:.7rem;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--honey-deep);background:var(--cream-2);padding:.35rem .9rem;border-radius:100px}
+
+.menu-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem 2.6rem}
+.menu-item{padding:1.05rem 0;border-bottom:1px dashed rgba(46,74,61,.22)}
+.menu-item .row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.menu-item .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.18rem;color:var(--jade)}
+.menu-item .price{font-family:'Fraunces',serif;font-weight:600;color:var(--honey-deep);white-space:nowrap}
+.menu-item .desc{color:var(--muted);font-size:.93rem;margin-top:.25rem}
+.menu-item .tiny{display:block;font-size:.76rem;color:var(--brown);margin-top:.3rem;font-style:italic}
+
+.menu-divider{display:flex;align-items:center;justify-content:center;gap:1.4rem;margin:3rem 0}
+.menu-divider::before,.menu-divider::after{content:"";height:1px;flex:1;max-width:200px;background:rgba(46,74,61,.2)}
+.menu-divider span{color:var(--honey);font-size:.7rem}
+.menu-divider span::before{content:"\25C6"}
+
+/* boosts grid */
+.boosts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;background:var(--cream-2);border-radius:var(--radius);padding:2.2rem}
+.boost-col h4{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--jade);text-transform:uppercase;letter-spacing:.04em}
+.boost-col .col-price{font-size:.85rem;font-weight:700;color:var(--honey-deep);margin:.15rem 0 .8rem}
+.boost-col ul{list-style:none}
+.boost-col li{font-size:.95rem;color:var(--muted);padding:.28rem 0;display:flex;justify-content:space-between;gap:.6rem}
+.boost-col li .p{color:var(--honey-deep);font-weight:600}
+
+.menu-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:2.4rem;font-style:italic}
+
+@media(max-width:760px){
+  .menu-list,.boosts-grid{grid-template-columns:1fr}
+  .boosts-grid{gap:1.6rem}
+}
