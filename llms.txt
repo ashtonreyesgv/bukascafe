@@ -1,0 +1,20 @@
+# Bukas Cafe
+
+> Bukas Cafe is a modern Filipino coffee shop at 56-14 Van Horn St, Elmhurst, Queens, NY 11373. Owned by Elmhurst locals Anna Javier and Angel Carreon, it serves progressive Filipino drinks and comfort food — signature lattes like the Bukas Na (salted cream, tultul salt) and Ube Eclipse, an espresso series called Clouds Over MNL, Japan-grown matcha milled in the Philippines, and kitchen items like the Adobo Jalapeño Melt. "Bukas" means both "tomorrow" and "open" in Tagalog. Open Wednesday–Sunday 9:00 AM–3:00 PM, closed Monday and Tuesday. Dine-in and takeout, no delivery, typically $10–20 per person. Phone: (929) 781-4080. Email: hello@bukascafe.com. Instagram: @bukas.cafe. Ranked the #1 new NYC coffee & tea spot of 2026 on Beli.
+
+## Pages
+
+- [Home](https://bukascafe.com/): Story, signature menu highlights, reviews, press, location and hours
+- [Menu](https://bukascafe.com/menu.html): Full menu — espresso, signature lattes, tea, matcha, non-coffee drinks, food, and add-ons with prices
+- [Events](https://bukascafe.com/events.html): Pop-ups and community events, including collabs and after-hours nights
+
+## Press
+
+- [The Infatuation review](https://www.theinfatuation.com/new-york/reviews/bukas-cafe): "That little savory touch makes the drinks pop" (March 2026)
+- [QNS feature](https://qns.com/2026/02/bukas-cafe-filipino-dishes-modern-twist/): "Bukas Cafe serves Filipino dishes with a modern twist" (February 2026)
+
+## Policies
+
+- [Privacy Policy](https://bukascafe.com/privacy.html)
+- [Terms of Service](https://bukascafe.com/terms.html)
+- [Accessibility](https://bukascafe.com/accessibility.html)

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page Not Found — Bukas Cafe</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="icon" type="image/png" href="images/favicon-32.png" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<meta name="theme-color" content="#142c20" />
+<style>
+  .nf{min-height:100vh;display:grid;place-items:center;text-align:center;padding:8rem 0 4rem}
+  .nf img.art{width:min(420px,80vw);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:2rem}
+  .nf .eyebrow{display:block;margin-bottom:.5rem}
+  .nf h1{font-size:clamp(2.4rem,6vw,4rem);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.6rem}
+  .nf h1 em{font-style:italic;color:var(--gold-2);text-transform:none}
+  .nf p{color:var(--cream-dim);max-width:44ch;margin:0 auto 2rem}
+  .nf .cta-row{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar" id="topbar">
+  <div class="tb-side left">
+    <a class="tb-link" href="index.html#visit">Contact</a>
+    <span class="tb-line" aria-hidden="true"></span>
+  </div>
+  <a class="tb-logo" href="index.html" aria-label="Bukas Cafe home">
+    <img src="images/brand-badge-cream.png" alt="Bukas Cafe" />
+  </a>
+  <div class="tb-side right">
+    <span class="tb-line" aria-hidden="true"></span>
+    <button class="tb-link" type="button" data-menu-open aria-haspopup="dialog" aria-controls="navOverlay">Menu</button>
+  </div>
+</header>
+
+<!-- OVERLAY MENU -->
+<div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true">
+  <button class="ov-close" type="button" data-menu-close>Close</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="events.html">Events</a>
+    <a href="index.html#press">Press</a>
+    <a href="index.html#visit">Contact</a>
+  </nav>
+  <div class="ov-foot">
+    <a href="https://www.instagram.com/bukas.cafe" target="_blank" rel="noopener">Instagram</a>
+    <span aria-hidden="true">·</span>
+    <a href="tel:+19297814080">(929) 781-4080</a>
+  </div>
+</div>
+
+<main>
+<section class="nf">
+  <div class="wrap">
+    <img class="art" src="images/storefront-illustration.jpg" alt="Watercolor illustration of the Bukas Cafe storefront on Van Horn St" />
+    <span class="eyebrow">404 — Page Not Found</span>
+    <h1>This page is <em>still brewing.</em></h1>
+    <p>The page you're looking for moved, or never existed. The good stuff — coffee, melts, and everything else — is just a click away.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="index.html">Back to home</a>
+      <a class="btn btn-ghost" href="menu.html">See the menu</a>
+      <a class="btn btn-ghost" href="events.html">Events</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
