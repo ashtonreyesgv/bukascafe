@@ -18,9 +18,8 @@
 <meta name="twitter:title" content="Bukas Cafe — Modern Filipino Coffee in Elmhurst, Queens" />
 <meta name="twitter:description" content="Bukas Cafe is a cozy, modern Filipino coffee shop in Elmhurst, Queens. Salted-cream ube lattes, kalamansi pastries, adobo melts. Join the list for new drops & early hours." />
 <meta name="twitter:image" content="https://bukascafe.com/images/og-cover.jpg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="images/photo-interior.webp" type="image/webp" />
+<link rel="stylesheet" href="css/fonts.css" />
 <link rel="stylesheet" href="css/styles.css" />
 <link rel="icon" type="image/png" href="images/favicon-32.png" />
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
@@ -115,36 +114,39 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 
 <!-- TOP BAR -->
 <header class="topbar" id="topbar">
   <div class="tb-side left">
-    <a class="tb-link" href="#visit">Contact</a>
-    <span class="tb-line" aria-hidden="true"></span>
+    <button class="tb-link" type="button" data-menu-open aria-haspopup="dialog" aria-controls="navOverlay">Menu</button>
   </div>
   <a class="tb-logo" href="#top" aria-label="Bukas Cafe home">
-    <img src="images/brand-badge-cream.png" alt="Bukas Cafe" />
+    <img class="logo-dark" src="images/brand-badge-cream.png" alt="Bukas Cafe" />
+    <img class="logo-light" src="images/logo-badge-green.png" alt="Bukas Cafe" />
   </a>
   <div class="tb-side right">
-    <span class="tb-line" aria-hidden="true"></span>
-    <button class="tb-link" type="button" data-menu-open aria-haspopup="dialog" aria-controls="navOverlay">Menu</button>
+    <a class="tb-link" href="#visit">Contact</a>
   </div>
 </header>
 
 <!-- OVERLAY MENU -->
 <div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true">
   <button class="ov-close" type="button" data-menu-close>Close</button>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="events.html">Events</a>
-    <a href="#press">Press</a>
-    <a href="#visit">Contact</a>
-  </nav>
-  <div class="ov-foot">
-    <a href="https://www.instagram.com/bukas.cafe" target="_blank" rel="noopener">Instagram</a>
-    <span aria-hidden="true">·</span>
-    <a href="tel:+19297814080">(929) 781-4080</a>
+  <div class="ov-grid">
+    <nav>
+      <a href="index.html"><span class="n">01</span>Home</a>
+      <a href="menu.html"><span class="n">02</span>Menu</a>
+      <a href="events.html"><span class="n">03</span>Events</a>
+      <a href="#press"><span class="n">04</span>Press</a>
+      <a href="#visit"><span class="n">05</span>Contact</a>
+    </nav>
+    <aside class="ov-aside">
+      <img src="images/storefront-illustration.jpg" alt="Watercolor illustration of the Bukas Cafe storefront" loading="lazy" />
+      <div class="ov-fact"><strong>Hours</strong>Wed–Sun · 9:00a – 3:00p</div>
+      <div class="ov-fact"><strong>Find us</strong>56-14 Van Horn St, Elmhurst, Queens</div>
+      <div class="ov-fact"><strong>Say hi</strong><a href="https://www.instagram.com/bukas.cafe" target="_blank" rel="noopener">@bukas.cafe</a> · <a href="tel:+19297814080">(929) 781-4080</a></div>
+    </aside>
   </div>
 </div>
 
@@ -152,7 +154,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"><img src="images/photo-interior.jpg" alt="" /></div>
+  <div class="hero-bg"><picture><source srcset="images/photo-interior.webp" type="image/webp" /><img src="images/photo-interior.jpg" alt="" width="1350" height="1800" fetchpriority="high" decoding="async" /></picture></div>
   <div class="wrap">
     <span class="eyebrow">Modern Filipino Coffee · Elmhurst, Queens</span>
     <h1>Bukas Cafe<em>Tomorrow tastes sweet &amp; salty.</em></h1>
@@ -178,11 +180,13 @@
   </div>
 </div>
 
+<div class="awning" aria-hidden="true"></div>
+
 <!-- STORY -->
 <section id="story" class="story">
   <div class="wrap story-grid">
     <div class="img-slot">
-      <img src="images/owners-illustration.jpg" alt="Illustrated portrait of Bukas Cafe owners Anna Javier and Angel Carreon" loading="lazy" />
+      <picture><source srcset="images/owners-illustration.webp" type="image/webp" /><img src="images/owners-illustration.jpg" alt="Illustrated portrait of Bukas Cafe owners Anna Javier and Angel Carreon" width="864" height="920" loading="lazy" decoding="async" /></picture>
     </div>
     <div>
       <span class="eyebrow">Our Story</span>
@@ -193,11 +197,11 @@
       <a href="#join" class="btn btn-ghost">Follow the journey</a>
     </div>
   </div>
-  <div class="wrap"><div class="brand-divider"><img src="images/brand-stacked-cream.png" alt="Bukas Cafe" /></div></div>
+  <div class="wrap"><div class="brand-divider"><img src="images/logo-full-green.png" alt="Bukas Cafe" /></div></div>
 </section>
 
 <!-- MENU -->
-<section id="menu" class="deep">
+<section id="menu" class="tint">
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">On the Menu</span>
@@ -207,7 +211,7 @@
     <div class="menu-grid">
       <article class="card">
         <div class="img-slot">
-          <img src="images/photo-bukas-na-latte.jpg" alt="Latte with rosetta latte art held over a wooden table at Bukas Cafe" loading="lazy" />
+          <picture><source srcset="images/photo-bukas-na-latte.webp" type="image/webp" /><img src="images/photo-bukas-na-latte.jpg" alt="Latte with rosetta latte art held over a wooden table at Bukas Cafe" width="1050" height="1400" loading="lazy" decoding="async" /></picture>
         </div>
         <div class="card-body">
           <span class="card-tag">Signature Latte</span>
@@ -217,7 +221,7 @@
       </article>
       <article class="card">
         <div class="img-slot">
-          <img src="images/photo-togo-cups.jpg" alt="Bukas Cafe branded to-go cups arranged on a tray against a deep green wall" loading="lazy" />
+          <picture><source srcset="images/photo-togo-cups.webp" type="image/webp" /><img src="images/photo-togo-cups.jpg" alt="Bukas Cafe branded to-go cups arranged on a tray against a deep green wall" width="933" height="1400" loading="lazy" decoding="async" /></picture>
         </div>
         <div class="card-body">
           <span class="card-tag">Espresso Series</span>
@@ -227,7 +231,7 @@
       </article>
       <article class="card">
         <div class="img-slot">
-          <img src="images/photo-adobo-melt.jpg" alt="Adobo jalapeño melt on sourdough with potato jalapeño chips and dips" loading="lazy" />
+          <picture><source srcset="images/photo-adobo-melt.webp" type="image/webp" /><img src="images/photo-adobo-melt.jpg" alt="Adobo jalapeño melt on sourdough with potato jalapeño chips and dips" width="1600" height="1067" loading="lazy" decoding="async" /></picture>
         </div>
         <div class="card-body">
           <span class="card-tag">From the Kitchen</span>
@@ -243,7 +247,7 @@
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews">
+<section id="reviews" class="band-dark">
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">Loved by the Neighborhood</span>
@@ -254,7 +258,7 @@
         <span class="num">4.8</span>
         <div>
           <div class="stars">★★★★★</div>
-          <div style="font-size:.85rem;color:var(--cream-faint)">119 Google reviews</div>
+          <div style="font-size:.85rem;color:var(--tx-faint)">119 Google reviews</div>
         </div>
       </div>
       <p class="blurb">Packed on weekends — locals line up Saturdays for the adobo melts. Worth the wait.</p>
@@ -278,7 +282,7 @@
 </section>
 
 <!-- PRESS / AS SEEN IN -->
-<section id="press" class="deep">
+<section id="press">
   <div class="wrap">
     <div class="section-head center">
       <span class="eyebrow">As Seen In</span>
@@ -286,7 +290,7 @@
       <p>Kind words from the writers and neighbors spreading the word about progressive Filipino coffee in Elmhurst.</p>
     </div>
     <div class="award-band">
-      <img src="images/beli-award.png" alt="Beli award graphic — number one new NYC coffee and tea of 2026" loading="lazy" />
+      <img src="images/beli-award.png" width="720" height="900" alt="Beli award graphic — number one new NYC coffee and tea of 2026" loading="lazy" />
       <div>
         <span class="eyebrow">Beli · 2026</span>
         <h3>#1 New NYC Coffee &amp; Tea of 2026</h3>
@@ -328,16 +332,16 @@
     <div class="ig-tiles">
       <a class="ig-tile" href="https://www.instagram.com/bukas.cafe" target="_blank" rel="noopener" aria-label="Bukas Cafe on Instagram">
         <span class="ig-glyph"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></span>
-        <img src="images/photo-mug-queens.jpg" alt="Hand reaching for a ceramic mug beneath a framed Queens poster" loading="lazy" />
+        <picture><source srcset="images/photo-mug-queens.webp" type="image/webp" /><img src="images/photo-mug-queens.jpg" alt="Hand reaching for a ceramic mug beneath a framed Queens poster" width="900" height="1200" loading="lazy" decoding="async" /></picture>
       </a>
       <a class="ig-tile" href="https://www.instagram.com/bukas.cafe" target="_blank" rel="noopener" aria-label="Bukas Cafe on Instagram">
-        <img src="images/photo-coffee-books.jpg" alt="Drip coffee and a latte on a wooden table beside a stack of books" loading="lazy" />
+        <picture><source srcset="images/photo-coffee-books.webp" type="image/webp" /><img src="images/photo-coffee-books.jpg" alt="Drip coffee and a latte on a wooden table beside a stack of books" width="900" height="1200" loading="lazy" decoding="async" /></picture>
       </a>
       <a class="ig-tile" href="https://www.instagram.com/bukas.cafe" target="_blank" rel="noopener" aria-label="Bukas Cafe on Instagram">
-        <img src="images/photo-espresso-bar.jpg" alt="Espresso machine and coffee bar detail at Bukas Cafe" loading="lazy" />
+        <picture><source srcset="images/photo-espresso-bar.webp" type="image/webp" /><img src="images/photo-espresso-bar.jpg" alt="Espresso machine and coffee bar detail at Bukas Cafe" width="800" height="1200" loading="lazy" decoding="async" /></picture>
       </a>
       <a class="ig-tile" href="https://www.instagram.com/bukas.cafe" target="_blank" rel="noopener" aria-label="Bukas Cafe on Instagram">
-        <img src="images/photo-window-guests.jpg" alt="Guests chatting over coffee at the window bar" loading="lazy" />
+        <picture><source srcset="images/photo-window-guests.webp" type="image/webp" /><img src="images/photo-window-guests.jpg" alt="Guests chatting over coffee at the window bar" width="1200" height="788" loading="lazy" decoding="async" /></picture>
       </a>
     </div>
   </div>
@@ -392,7 +396,7 @@
 </section>
 
 <!-- JOIN / NEWSLETTER -->
-<section id="join" class="deep">
+<section id="join" class="tint">
   <div class="wrap">
     <div class="news">
       <span class="eyebrow">The Bukas List</span>

@@ -18,45 +18,46 @@
 <meta name="twitter:title" content="Privacy Policy — Bukas Cafe" />
 <meta name="twitter:description" content="How Bukas Cafe collects, uses, and protects your information — including our email mailing list." />
 <meta name="twitter:image" content="https://bukascafe.com/images/og-cover.jpg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/fonts.css" />
 <link rel="stylesheet" href="css/styles.css" />
 <link rel="icon" type="image/png" href="images/favicon-32.png" />
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 <meta name="theme-color" content="#142c20" />
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- TOP BAR -->
 <header class="topbar" id="topbar">
   <div class="tb-side left">
-    <a class="tb-link" href="index.html#visit">Contact</a>
-    <span class="tb-line" aria-hidden="true"></span>
+    <button class="tb-link" type="button" data-menu-open aria-haspopup="dialog" aria-controls="navOverlay">Menu</button>
   </div>
   <a class="tb-logo" href="index.html" aria-label="Bukas Cafe home">
-    <img src="images/brand-badge-cream.png" alt="Bukas Cafe" />
+    <img class="logo-dark" src="images/brand-badge-cream.png" alt="Bukas Cafe" />
+    <img class="logo-light" src="images/logo-badge-green.png" alt="Bukas Cafe" />
   </a>
   <div class="tb-side right">
-    <span class="tb-line" aria-hidden="true"></span>
-    <button class="tb-link" type="button" data-menu-open aria-haspopup="dialog" aria-controls="navOverlay">Menu</button>
+    <a class="tb-link" href="index.html#visit">Contact</a>
   </div>
 </header>
 
 <!-- OVERLAY MENU -->
 <div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true">
   <button class="ov-close" type="button" data-menu-close>Close</button>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="events.html">Events</a>
-    <a href="index.html#press">Press</a>
-    <a href="index.html#visit">Contact</a>
-  </nav>
-  <div class="ov-foot">
-    <a href="https://www.instagram.com/bukas.cafe" target="_blank" rel="noopener">Instagram</a>
-    <span aria-hidden="true">·</span>
-    <a href="tel:+19297814080">(929) 781-4080</a>
+  <div class="ov-grid">
+    <nav>
+      <a href="index.html"><span class="n">01</span>Home</a>
+      <a href="menu.html"><span class="n">02</span>Menu</a>
+      <a href="events.html"><span class="n">03</span>Events</a>
+      <a href="index.html#press"><span class="n">04</span>Press</a>
+      <a href="index.html#visit"><span class="n">05</span>Contact</a>
+    </nav>
+    <aside class="ov-aside">
+      <img src="images/storefront-illustration.jpg" alt="Watercolor illustration of the Bukas Cafe storefront" loading="lazy" />
+      <div class="ov-fact"><strong>Hours</strong>Wed–Sun · 9:00a – 3:00p</div>
+      <div class="ov-fact"><strong>Find us</strong>56-14 Van Horn St, Elmhurst, Queens</div>
+      <div class="ov-fact"><strong>Say hi</strong><a href="https://www.instagram.com/bukas.cafe" target="_blank" rel="noopener">@bukas.cafe</a> · <a href="tel:+19297814080">(929) 781-4080</a></div>
+    </aside>
   </div>
 </div>
 
@@ -69,8 +70,10 @@
   </div>
 </section>
 
+<div class="awning" aria-hidden="true"></div>
+
 <!-- CONTENT -->
-<main>
+<main id="main">
 <section class="legal">
   <div class="wrap">
     <p class="lead">Bukas Cafe ("we," "us," "our") respects your privacy. This policy explains what we collect, why, and the choices you have.</p>
