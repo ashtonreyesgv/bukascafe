@@ -59,6 +59,50 @@
   window.addEventListener('scroll', onScroll, {passive:true});
 })();
 
+// Events page: auto-archive past events, countdown chip on the next one.
+// Cards declare data-start / data-end (ISO datetimes); anything whose end
+// has passed moves itself into the "Past events" section on load.
+(function(){
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.event-card[data-end]'));
+  if(!cards.length) return;
+  var pastWrap = document.getElementById('pastEvents');
+  var pastList = pastWrap ? pastWrap.querySelector('.past-list') : null;
+  var upcoming = [];
+  cards.forEach(function(card){
+    var end = Date.parse(card.getAttribute('data-end'));
+    if(!isNaN(end) && end < Date.now()){
+      card.classList.add('past');
+      var cta = card.querySelector('.event-cta');
+      if(cta) cta.remove();
+      if(pastList){ pastList.insertBefore(card, pastList.firstChild); pastWrap.hidden = false; }
+    } else {
+      upcoming.push(card);
+    }
+  });
+  if(!upcoming.length) return;
+  upcoming.sort(function(a, b){
+    return Date.parse(a.getAttribute('data-start') || a.getAttribute('data-end')) -
+           Date.parse(b.getAttribute('data-start') || b.getAttribute('data-end'));
+  });
+  var next = upcoming[0];
+  var chip = document.createElement('span');
+  chip.className = 'count-chip';
+  next.appendChild(chip);
+  function render(){
+    var start = Date.parse(next.getAttribute('data-start') || next.getAttribute('data-end'));
+    var end = Date.parse(next.getAttribute('data-end'));
+    var now = Date.now();
+    if(now >= end){ chip.hidden = true; return; }
+    if(now >= start){ chip.textContent = 'Happening now'; return; }
+    var ms = start - now;
+    var d = Math.floor(ms / 86400000);
+    var hrs = Math.floor((ms % 86400000) / 3600000);
+    chip.textContent = 'In ' + (d > 0 ? d + 'd ' : '') + hrs + 'h';
+  }
+  render();
+  setInterval(render, 60000);
+})();
+
 // Lightweight, no-backend email capture (in-memory). Hook the endpoint
 // below up to Mailchimp / Beehiiv / Klaviyo / etc. when ready.
 document.querySelectorAll('form.capture').forEach(function(form){

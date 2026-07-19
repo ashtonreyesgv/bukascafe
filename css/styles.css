@@ -175,7 +175,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .hero h1 em{display:block;font-style:italic;text-transform:none;color:var(--gold-2);
   font-size:.42em;letter-spacing:.02em;margin-top:.6rem}
 .hero p.lead{font-size:1.18rem;color:var(--tx-dim);max-width:52ch;margin:1.8rem auto 2.4rem}
-.hero .capture{margin:0 auto;justify-content:center}
+.hero .capture{margin:2.4rem auto 0;justify-content:center}
 .hero-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem;justify-content:center}
 .chip{font-size:.78rem;font-weight:600;padding:.45rem .95rem;border-radius:100px;
   background:rgba(248,242,226,.08);border:1px solid var(--line-soft);color:var(--tx-dim)}
@@ -461,6 +461,18 @@ footer{background:var(--green-deep);color:var(--tx-dim);padding:4rem 0 2.5rem}
 .events-empty{text-align:center;color:var(--tx-dim);background:var(--cream-2);
   border:1px dashed var(--line);border-radius:var(--radius);padding:2.6rem 1.6rem;margin-top:1.6rem}
 .events-empty h3{color:var(--green);font-size:1.3rem;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.02em}
+
+/* auto-archived events + countdown */
+.event-card{position:relative}
+.count-chip{position:absolute;top:1.1rem;right:1.3rem;z-index:2;background:var(--gold);color:var(--green-deep);
+  font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.35rem .85rem;border-radius:100px;box-shadow:var(--shadow)}
+.event-card.past{opacity:.72;filter:grayscale(.35)}
+.event-card.past:hover{transform:none;box-shadow:none;border-color:var(--line-soft)}
+.events-past{margin-top:3.5rem}
+.past-head{margin-bottom:1.4rem}
+.past-head h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--green);text-transform:uppercase;
+  letter-spacing:.03em;margin-top:.3rem}
 
 /* ============================================================== RESPONSIVE */
 @media(max-width:920px){
