@@ -238,7 +238,7 @@ section{padding:5.5rem 0}
 .story-grid .img-slot img{object-position:center top}
 .story h2{font-size:clamp(2rem,4vw,3rem);color:var(--tx);margin-bottom:1.3rem;
   text-transform:uppercase;letter-spacing:.02em}
-.story p{color:var(--tx-dim);margin-bottom:1.1rem;font-size:1.05rem}
+.story p{color:var(--tx-dim);margin-bottom:.85rem;font-size:.95rem;line-height:1.55}
 .story .owners{font-weight:600;color:var(--gold-deep)}
 
 /* --------------------------------------------------------------- menu cards */
