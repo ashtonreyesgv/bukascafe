@@ -476,7 +476,7 @@ footer{background:var(--green-deep);color:var(--tx-dim);padding:4rem 0 2.5rem}
 
 /* ============================================================== RESPONSIVE */
 @media(max-width:920px){
-  .hero-grid,.story-grid,.visit-grid,.ig-grid{grid-template-columns:1fr;gap:2.4rem}
+  .story-grid,.visit-grid,.ig-grid{grid-template-columns:1fr;gap:2.4rem}
   .menu-grid,.quotes,.press-grid{grid-template-columns:1fr}
   .story-grid .img-slot{min-height:320px;margin-top:0}
   .ov-grid{grid-template-columns:1fr;gap:2rem;padding:6rem 0 3rem;text-align:left}

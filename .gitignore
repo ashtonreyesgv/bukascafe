@@ -1,2 +1,15 @@
 # Raw client photo drops — processed selects live in images/
 batch_one/
+
+# Local tooling / editor config
+.claude/
+.vercel
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS cruft
+.DS_Store
+Thumbs.db

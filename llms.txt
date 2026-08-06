@@ -4,9 +4,9 @@
 
 ## Pages
 
-- [Home](https://bukascafe.com/): Story, signature menu highlights, reviews, press, location and hours
-- [Menu](https://bukascafe.com/menu.html): Full menu — espresso, signature lattes, tea, matcha, non-coffee drinks, food, and add-ons with prices
-- [Events](https://bukascafe.com/events.html): Pop-ups and community events, including collabs and after-hours nights
+- [Home](https://www.bukascafe.com/): Story, signature menu highlights, reviews, press, location and hours
+- [Menu](https://www.bukascafe.com/menu.html): Full menu — espresso, signature lattes, tea, matcha, non-coffee drinks, food, and add-ons with prices
+- [Events](https://www.bukascafe.com/events.html): Pop-ups and community events, including collabs and after-hours nights
 
 ## Press
 
@@ -17,6 +17,6 @@
 
 ## Policies
 
-- [Privacy Policy](https://bukascafe.com/privacy.html)
-- [Terms of Service](https://bukascafe.com/terms.html)
-- [Accessibility](https://bukascafe.com/accessibility.html)
+- [Privacy Policy](https://www.bukascafe.com/privacy.html)
+- [Terms of Service](https://www.bukascafe.com/terms.html)
+- [Accessibility](https://www.bukascafe.com/accessibility.html)
