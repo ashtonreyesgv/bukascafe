@@ -3,19 +3,8 @@
    A morning cafe, not a midnight bar: cream-first with deep-green bands.
    Palette:  #f8f2e2 cream base · #142c20 green · warm gold accent
    Motif:    the scalloped awning from the Bukas badge
-   Display:  Perandory (brand) with Playfair Display fallback
+   Display:  Playfair Display
    ===================================================================== */
-
-/* ---- Perandory brand face (drop the licensed file at fonts/perandory.woff2
-        and it takes over automatically; until then Playfair Display stands in) ---- */
-@font-face{
-  font-family:'Perandory';
-  src:url('../fonts/perandory.woff2') format('woff2'),
-      url('../fonts/perandory.woff') format('woff'),
-      url('../fonts/perandory.otf') format('opentype');
-  font-weight:400 700;
-  font-display:swap;
-}
 
 :root{
   --cream:#f8f2e2;         /* body background                  */
@@ -32,7 +21,7 @@
   --radius:20px;
   --shadow:0 22px 50px -28px rgba(20,44,32,.4);
   --shadow-dark:0 26px 60px -30px rgba(0,0,0,.65);
-  --font-display:'Perandory','Playfair Display',Georgia,serif;
+  --font-display:'Playfair Display',Georgia,serif;
   --font-body:'Inter',system-ui,-apple-system,sans-serif;
 
   /* contextual ink — light defaults; dark bands override */
