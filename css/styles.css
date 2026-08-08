@@ -474,7 +474,9 @@ footer{background:var(--green-deep);color:var(--tx-dim);padding:4rem 0 2.5rem}
 }
 @media(max-width:760px){
   section{padding:4rem 0}
-  .topbar{grid-template-columns:auto 1fr auto;gap:1rem}
+  /* equal side tracks keep the badge dead-centre in the viewport, not
+     centred between two links of different widths */
+  .topbar{grid-template-columns:1fr auto 1fr;gap:1rem}
   .tb-side.left{order:1}.tb-logo{order:2}.tb-side.right{order:3}
   .menu-list,.boosts-grid{grid-template-columns:1fr}
   .reviews-top .write{margin-left:0;width:100%}
@@ -488,6 +490,11 @@ footer{background:var(--green-deep);color:var(--tx-dim);padding:4rem 0 2.5rem}
   .award-band{flex-direction:column;text-align:center;padding:1.6rem 1.4rem}
   .award-band p{max-width:none}
   .nav-overlay nav a{font-size:clamp(1.9rem,9vw,2.6rem)}
+}
+@media(max-width:520px){
+  /* "Events & Pop-Ups" measures 10.4em at .05em tracking — cap the size to
+     92vw / 10.4 so the title always holds one line */
+  .events-hero h1{font-size:min(2.6rem,8.5vw);white-space:nowrap}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;transition-duration:.001ms!important;transition-delay:0s!important}
