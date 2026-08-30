@@ -35,7 +35,7 @@
 
 /* dark-context bands flip the ink */
 .hero,.ticker,.band-dark,.ig,footer,
-.menu-hero,.legal-hero,.events-hero{
+.menu-hero,.legal-hero,.events-hero,.sayo-hero{
   --tx:var(--cream);
   --tx-dim:rgba(248,242,226,.78);
   --tx-faint:rgba(248,242,226,.55);
@@ -140,6 +140,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .nav-overlay.open nav a:nth-child(3){animation-delay:.18s}
 .nav-overlay.open nav a:nth-child(4){animation-delay:.24s}
 .nav-overlay.open nav a:nth-child(5){animation-delay:.30s}
+.nav-overlay.open nav a:nth-child(6){animation-delay:.36s}
+/* "Sa'yo ang Bukas" is twice the width of the other labels — step it down so
+   it still holds one line on a narrow phone */
+.nav-overlay nav a.ov-long{font-size:clamp(2rem,5vw,3.6rem)}
 @keyframes ov-in{to{opacity:1;transform:translateY(0)}}
 .ov-aside{display:flex;flex-direction:column;gap:1.1rem;align-items:flex-start}
 .ov-aside img{width:min(320px,100%);border-radius:var(--radius);box-shadow:var(--shadow)}
@@ -463,9 +467,80 @@ footer{background:var(--green-deep);color:var(--tx-dim);padding:4rem 0 2.5rem}
 .past-head h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--green);text-transform:uppercase;
   letter-spacing:.03em;margin-top:.3rem}
 
+/* ============================================== SA'YO ANG BUKAS — POP-UPS */
+.sayo-hero{background:var(--green-deep);color:var(--tx);padding:8rem 0 3.5rem;text-align:center;
+  background-image:radial-gradient(circle at 50% -10%,rgba(201,154,78,.22),rgba(0,0,0,0) 60%)}
+.sayo-hero .sayo-seal{width:104px;height:auto;margin:0 auto 1.3rem;display:block;opacity:.95}
+.sayo-hero h1{font-family:var(--font-display);font-size:clamp(2.4rem,6.4vw,4.2rem);color:var(--cream);
+  margin:.55rem 0 1rem;letter-spacing:.01em}
+.sayo-hero h1 em{font-style:italic;color:var(--gold-2)}
+.sayo-hero p.lead{font-size:1.12rem;color:var(--tx-dim);max-width:50ch;margin:0 auto}
+
+.sayo-page{padding:4.5rem 0 5.5rem}
+.sayo-page .wrap{width:min(820px,92vw)}
+.sayo-page section{padding:0;margin-bottom:4.5rem}
+.sayo-page section:last-child{margin-bottom:0}
+.sayo-story h2{font-size:clamp(1.9rem,4vw,2.7rem);color:var(--green);margin:.7rem 0 1.3rem;
+  text-transform:uppercase;letter-spacing:.02em}
+.sayo-story p{color:var(--tx-dim);font-size:1.02rem;margin-bottom:1rem}
+.sayo-story strong{color:var(--green);font-weight:600}
+.sayo-pull{margin:1.9rem 0;padding:1.5rem 1.7rem;background:var(--cream-2);
+  border-left:3px solid var(--gold);border-radius:0 16px 16px 0;
+  font-family:var(--font-display);font-style:italic;line-height:1.4;color:var(--green);
+  font-size:clamp(1.18rem,2.6vw,1.5rem)}
+.sayo-story p.sayo-sign{text-align:center;margin:2.4rem 0 0;font-family:var(--font-display);
+  font-style:italic;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--green);line-height:1.2}
+
+/* the expandable "A Few Things to Know" list */
+.faq-list{display:flex;flex-direction:column;gap:.7rem}
+.faq-item{background:var(--paper);border:1px solid var(--line-soft);border-radius:16px;
+  transition:border-color .25s ease,box-shadow .25s ease}
+.faq-item[open]{border-color:var(--line);box-shadow:var(--shadow)}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;gap:1rem;
+  padding:1.1rem 1.4rem;font-family:var(--font-display);font-size:1.14rem;font-weight:600;
+  color:var(--green);line-height:1.35;transition:color .2s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{color:var(--gold-deep)}
+.faq-item summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;border-radius:16px}
+.faq-item summary::after{content:"";flex:0 0 10px;width:10px;height:10px;margin-left:auto;margin-top:.4rem;
+  border-right:2px solid var(--gold-deep);border-bottom:2px solid var(--gold-deep);
+  transform:rotate(45deg);transition:transform .25s ease}
+.faq-item[open] summary::after{transform:rotate(-135deg);margin-top:.62rem}
+.faq-body{padding:0 1.4rem 1.25rem;color:var(--tx-dim);font-size:.97rem}
+.faq-body p + p{margin-top:.65rem}
+.faq-body strong{color:var(--green);font-weight:600}
+.faq-close{margin-top:2rem;padding:1.5rem 1.7rem;background:var(--cream-2);border-radius:16px;
+  color:var(--tx-dim);font-size:1rem;text-align:center}
+.faq-close strong{color:var(--green);font-weight:600}
+
+/* the send-us-your-idea card */
+.sayo-apply{--tx:var(--cream);--tx-dim:rgba(248,242,226,.78);--line:rgba(248,242,226,.16);
+  background:var(--green);color:var(--cream);border-radius:var(--radius);text-align:center;
+  padding:clamp(1.9rem,4.5vw,3rem)}
+.sayo-apply h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--cream);margin-bottom:.7rem;
+  text-transform:uppercase;letter-spacing:.02em}
+.sayo-apply p{color:var(--tx-dim);max-width:52ch;margin:0 auto 1rem}
+.sayo-subject{display:block;width:fit-content;max-width:100%;margin:1.2rem auto 1.6rem;
+  background:rgba(248,242,226,.07);border:1px dashed rgba(248,242,226,.32);border-radius:12px;
+  padding:.8rem 1.15rem;color:var(--gold-2);line-height:1.5;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88rem}
+.sayo-subject b{display:block;font-family:var(--font-body);font-size:.68rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--tx-faint);margin-bottom:.35rem}
+
+/* home-page teaser band */
+.sayo-band-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:3.2rem;align-items:center}
+.sayo-band .img-slot{min-height:360px}
+.sayo-band h2{font-size:clamp(2rem,4.2vw,3rem);color:var(--green);margin:.6rem 0 .5rem;
+  text-transform:uppercase;letter-spacing:.02em}
+.sayo-band .sayo-tagline{display:block;font-family:var(--font-display);font-style:italic;
+  font-size:1.18rem;color:var(--gold-deep);margin-bottom:1rem}
+.sayo-band p{color:var(--tx-dim);font-size:1.02rem;margin-bottom:1rem;max-width:52ch}
+.sayo-band .btn{margin-top:.7rem}
+
 /* ============================================================== RESPONSIVE */
 @media(max-width:920px){
-  .story-grid,.visit-grid,.ig-grid{grid-template-columns:1fr;gap:2.4rem}
+  .story-grid,.visit-grid,.ig-grid,.sayo-band-grid{grid-template-columns:1fr;gap:2.4rem}
+  .sayo-band .img-slot{min-height:280px}
   .menu-grid,.quotes,.press-grid{grid-template-columns:1fr}
   .story-grid .img-slot{min-height:320px;margin-top:0}
   .ov-grid{grid-template-columns:1fr;gap:2rem;padding:6rem 0 3rem;text-align:left}
@@ -490,6 +565,10 @@ footer{background:var(--green-deep);color:var(--tx-dim);padding:4rem 0 2.5rem}
   .award-band{flex-direction:column;text-align:center;padding:1.6rem 1.4rem}
   .award-band p{max-width:none}
   .nav-overlay nav a{font-size:clamp(1.9rem,9vw,2.6rem)}
+  .nav-overlay nav a.ov-long{font-size:clamp(1.55rem,7vw,2.6rem)}
+  .sayo-page section{margin-bottom:3.4rem}
+  .faq-item summary{padding:1rem 1.15rem;font-size:1.05rem;gap:.8rem}
+  .faq-body{padding:0 1.15rem 1.1rem}
 }
 @media(max-width:520px){
   /* "Events & Pop-Ups" measures 10.4em at .05em tracking — cap the size to

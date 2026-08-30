@@ -61,29 +61,50 @@
 
 // Events page: auto-archive past events, countdown chip on the next one.
 // Cards declare data-start / data-end (ISO datetimes); anything whose end
-// has passed moves itself into the "Past events" section on load.
+// has passed moves itself into the "Past events" section on load. Both
+// lists are re-ordered by date on load, so the markup order can be however
+// it reads best in the source — the archive always runs newest-first and
+// upcoming always runs soonest-first.
 (function(){
   var cards = Array.prototype.slice.call(document.querySelectorAll('.event-card[data-end]'));
   if(!cards.length) return;
   var pastWrap = document.getElementById('pastEvents');
   var pastList = pastWrap ? pastWrap.querySelector('.past-list') : null;
-  var upcoming = [];
+  var upcoming = [], past = [];
+
+  function startOf(card){
+    return Date.parse(card.getAttribute('data-start') || card.getAttribute('data-end'));
+  }
+
   cards.forEach(function(card){
     var end = Date.parse(card.getAttribute('data-end'));
     if(!isNaN(end) && end < Date.now()){
       card.classList.add('past');
       var cta = card.querySelector('.event-cta');
       if(cta) cta.remove();
-      if(pastList){ pastList.insertBefore(card, pastList.firstChild); pastWrap.hidden = false; }
+      past.push(card);
     } else {
       upcoming.push(card);
     }
   });
+
+  // Archive, newest first: whatever just wrapped sits at the top, and older
+  // events fall further down the further back they go.
+  if(past.length && pastList){
+    past.sort(function(a, b){ return startOf(b) - startOf(a); });
+    past.forEach(function(card){ pastList.appendChild(card); });
+    pastWrap.hidden = false;
+  }
+
   if(!upcoming.length) return;
-  upcoming.sort(function(a, b){
-    return Date.parse(a.getAttribute('data-start') || a.getAttribute('data-end')) -
-           Date.parse(b.getAttribute('data-start') || b.getAttribute('data-end'));
+  upcoming.sort(function(a, b){ return startOf(a) - startOf(b); });
+  // Re-flow the survivors in date order, ahead of the "more brewing soon" note.
+  var list = upcoming[0].parentNode;
+  var tail = list.querySelector('.events-empty');
+  upcoming.forEach(function(card){
+    if(tail){ list.insertBefore(card, tail); } else { list.appendChild(card); }
   });
+
   var next = upcoming[0];
   var chip = document.createElement('span');
   chip.className = 'count-chip';
