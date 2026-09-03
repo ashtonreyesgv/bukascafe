@@ -478,6 +478,8 @@ footer{background:var(--green-deep);color:var(--tx-dim);padding:4rem 0 2.5rem}
 
 .sayo-page{padding:4.5rem 0 5.5rem}
 .sayo-page .wrap{width:min(820px,92vw)}
+/* cancels the global section padding. NOTE: this is (0,1,1), so any padded
+   component inside .sayo-page needs a .sayo-page prefix to outrank it */
 .sayo-page section{padding:0;margin-bottom:4.5rem}
 .sayo-page section:last-child{margin-bottom:0}
 .sayo-story h2{font-size:clamp(1.9rem,4vw,2.7rem);color:var(--green);margin:.7rem 0 1.3rem;
@@ -509,14 +511,11 @@ footer{background:var(--green-deep);color:var(--tx-dim);padding:4rem 0 2.5rem}
 .faq-body{padding:0 1.4rem 1.25rem;color:var(--tx-dim);font-size:.97rem}
 .faq-body p + p{margin-top:.65rem}
 .faq-body strong{color:var(--green);font-weight:600}
-.faq-close{margin-top:2rem;padding:1.5rem 1.7rem;background:var(--cream-2);border-radius:16px;
-  color:var(--tx-dim);font-size:1rem;text-align:center}
-.faq-close strong{color:var(--green);font-weight:600}
 
 /* the send-us-your-idea card */
-.sayo-apply{--tx:var(--cream);--tx-dim:rgba(248,242,226,.78);--line:rgba(248,242,226,.16);
+.sayo-page .sayo-apply{--tx:var(--cream);--tx-dim:rgba(248,242,226,.78);--line:rgba(248,242,226,.16);
   background:var(--green);color:var(--cream);border-radius:var(--radius);text-align:center;
-  padding:clamp(1.9rem,4.5vw,3rem)}
+  padding:clamp(2.2rem,4.5vw,3.2rem)}
 .sayo-apply h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--cream);margin-bottom:.7rem;
   text-transform:uppercase;letter-spacing:.02em}
 .sayo-apply p{color:var(--tx-dim);max-width:52ch;margin:0 auto 1rem}
@@ -526,6 +525,13 @@ footer{background:var(--green-deep);color:var(--tx-dim);padding:4rem 0 2.5rem}
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88rem}
 .sayo-subject b{display:block;font-family:var(--font-body);font-size:.68rem;font-weight:700;
   letter-spacing:.2em;text-transform:uppercase;color:var(--tx-faint);margin-bottom:.35rem}
+
+/* the route into the guidelines page */
+.sayo-page .sayo-next{text-align:center;background:var(--cream-2);border-radius:var(--radius);
+  padding:clamp(2.2rem,4.5vw,3.2rem)}
+.sayo-next h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--green);margin-bottom:.6rem;
+  text-transform:uppercase;letter-spacing:.02em}
+.sayo-next p{color:var(--tx-dim);max-width:48ch;margin:0 auto 1.6rem}
 
 /* home-page teaser band */
 .sayo-band-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:3.2rem;align-items:center}
